@@ -2,6 +2,9 @@
   import { onMount } from 'svelte';
   import emailjs from '@emailjs/browser';
 
+  // Vite supplies the correct asset prefix locally and on GitHub Pages.
+  const ASSET_BASE = import.meta.env.BASE_URL;
+
   let opened = $state(false);
   let opening = $state(false);
   let openingTimer;
@@ -502,7 +505,7 @@ function scratch(node) {
 
 <audio
   bind:this={audio}
-  src="/music/wedding-music.m4a"
+  src={`${ASSET_BASE}music/wedding-music.m4a`}
   preload="auto"
   onended={handleMusicEnded}
 ></audio>
@@ -512,7 +515,11 @@ function scratch(node) {
 
 
 {#if !opened}
-  <main class="opening-screen" class:opening={opening}>
+  <main
+    class="opening-screen"
+    class:opening={opening}
+    style={`--asset-envelope-image: url("${ASSET_BASE}images/Tap_to_Open_Botanical_Wax_Seal.png")`}
+  >
     <div class="opening-panel opening-panel-left"></div>
     <div class="opening-panel opening-panel-right"></div>
 
@@ -531,7 +538,7 @@ function scratch(node) {
 
   <header class="site-header">
     <a class="brand" href="#home" onclick={() => menuOpen = false}>
-      <img src="/images/ml-rose-monogram.png" alt="Manoj and Lavanya monogram" />
+      <img src={`${ASSET_BASE}images/ml-rose-monogram.png`} alt="Manoj and Lavanya monogram" />
     </a>
     <button class="menu-toggle" onclick={() => menuOpen = !menuOpen} aria-label="Toggle navigation">{menuOpen ? '×' : '☰'}</button>
     <nav class:show={menuOpen}>
@@ -544,17 +551,17 @@ function scratch(node) {
     <button class="music-button" onclick={toggleMusic} aria-label="Toggle background music">{musicOn ? '♫ Music on' : '♫ Music off'}</button>
   </header>
 
-  <main>
+  <main style={`--asset-paper-image: url("${ASSET_BASE}images/Background_02.jpeg")`}>
     <section class="hero" id="home">
       <div class="hero-ganesha">
-        <img src="/images/ganesha.png" alt="Lord Ganesha" />
+        <img src={`${ASSET_BASE}images/ganesha.png`} alt="Lord Ganesha" />
       </div>
       <p class="eyebrow">
       || Sri Beteraya Swamy Prasanna ||<br />
       || Sri Kempamma (Udusalamma) Devi Krupe ||
       </p>
       <div class="hero-emblem image-emblem">
-        <img src="/images/ml-rose-monogram.png" alt="Manoj and Lavanya monogram" />
+        <img src={`${ASSET_BASE}images/ml-rose-monogram.png`} alt="Manoj and Lavanya monogram" />
       </div>
       <p class="script-line">Together with our families</p>
       <h1>Manoj <i>&</i> Lavanya</h1>
@@ -571,7 +578,7 @@ function scratch(node) {
   <div class="couple-layout">
     <div class="couple-photo">
       <img
-        src="/images/couple-hero.jpg"
+        src={`${ASSET_BASE}images/couple-hero.jpg`}
         alt="Manoj and Lavanya together"
         loading="lazy"
       />
@@ -746,9 +753,9 @@ function scratch(node) {
       <div class="section-heading"><p class="eyebrow">Moments to remember</p><h2>A glimpse of our story</h2><p class="section-intro">A few favourite frames, soon to be filled with memories.</p></div>
       <div class="gallery-grid">
         {#each [
-          {src:'/images/couple-portrait-1.jpg', alt:'Manoj and Lavanya smiling together'},
-          {src:'/images/couple-portrait-2.jpg', alt:'Manoj and Lavanya sharing a moment'},
-          {src:'/images/couple-portrait-3.jpg', alt:'Manoj and Lavanya in traditional attire'}
+          {src:`${ASSET_BASE}images/couple-portrait-1.jpg`, alt:'Manoj and Lavanya smiling together'},
+          {src:`${ASSET_BASE}images/couple-portrait-2.jpg`, alt:'Manoj and Lavanya sharing a moment'},
+          {src:`${ASSET_BASE}images/couple-portrait-3.jpg`, alt:'Manoj and Lavanya in traditional attire'}
         ] as photo, i}
           <button class="gallery-photo gallery-{i+1}" onclick={() => lightbox = photo.src} aria-label="View couple photograph {i+1}">
             <img src={photo.src} alt={photo.alt} loading="lazy" />
@@ -808,7 +815,7 @@ function scratch(node) {
         {/if}
       </section>
 
-    <section class="closing-section reveal-section" use:reveal><div class="closing-logo"><img src="/images/ml-rose-monogram.png" alt="Manoj and Lavanya floral monogram" /></div><p class="eyebrow">Your presence is our present</p><h2>We can't wait to celebrate with you.</h2><p>With love, Manoj & Lavanya</p><a href="#home">Back to top ↑</a></section>
+    <section class="closing-section reveal-section" use:reveal><div class="closing-logo"><img src={`${ASSET_BASE}images/ml-rose-monogram.png`} alt="Manoj and Lavanya floral monogram" /></div><p class="eyebrow">Your presence is our present</p><h2>We can't wait to celebrate with you.</h2><p>With love, Manoj & Lavanya</p><a href="#home">Back to top ↑</a></section>
   </main>
   <footer><span>Manoj & Lavanya · 03.12.2026</span><span>Made with love ♡</span></footer>
 {/if}

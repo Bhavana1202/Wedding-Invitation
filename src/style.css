@@ -310,7 +310,7 @@ footer {
   height: 100%;
   z-index: 2;
 
-  background-image: url('/images/Tap_to_Open_Botanical_Wax_Seal.png');
+  background-image: var(--asset-envelope-image);
   background-repeat: no-repeat;
   background-size: 200% 100%;
 
@@ -520,7 +520,7 @@ footer {
       rgba(247, 245, 237, 0.12),
       rgba(247, 245, 237, 0.12)
     ),
-    url('/images/Background_02.jpeg');
+    var(--asset-paper-image);
 
   background-size: cover;
   background-position: center;
@@ -647,7 +647,7 @@ footer {
   position: relative;
   overflow: hidden;
   clip-path: url(#heartClip);
-  background-image: url('/images/Background_02.jpeg');
+  background-image: var(--asset-paper-image);
   background-size: cover;
   background-position: center;
   border: none;
@@ -733,7 +733,7 @@ footer {
 
   background:
     linear-gradient(#f7f5ed30, #f7f5ed30),
-    url('/images/Background_02.jpeg') center / cover;
+    var(--asset-paper-image) center / cover;
 }
 
 .booklet-page-inner::after {
