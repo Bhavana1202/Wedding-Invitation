@@ -1,0 +1,2739 @@
+:root{font-family:'DM Sans',sans-serif;color:#342b22;background:#f8f4eb;font-synthesis:none;text-rendering:optimizeLegibility;--ink:#342b22;--muted:#786d5e;--gold:#a77d3d;--line:#d9cbb2;--cream:#f8f4eb;--rose:#9d625b}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}button,input,textarea{font:inherit}a{color:inherit}.opening-screen{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 22px;position:relative;overflow:hidden;background:radial-gradient(ellipse at center,#fffdf7 0%,#f8f1e4 68%,#eee2cd 100%)}.opening-screen:before,.opening-screen:after{content:'❧';position:absolute;color:#b99a69;font-size:150px;opacity:.2;top:7%;left:5%;transform:rotate(-35deg)}.opening-screen:after{left:auto;right:5%;top:auto;bottom:7%;transform:rotate(145deg)}.opening-ornament{font-size:35px;color:var(--gold);margin-bottom:18px}.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}.monogram,.hero-emblem,.closing-emblem{font-family:'Cormorant Garamond',serif;font-size:43px;border:1px solid var(--gold);border-radius:50%;width:112px;height:112px;display:grid;place-content:center;margin:20px auto;color:var(--ink);outline:1px solid #cdb78f;outline-offset:6px}.monogram span,.hero-emblem span,.closing-emblem span{font-style:italic;color:var(--rose);font-size:24px}.opening-rule{height:1px;width:95px;background:var(--gold);margin:20px}.opening-screen h1,.hero h1{font:500 clamp(42px,8vw,76px)/.95 'Cormorant Garamond',serif;margin:12px 0;color:var(--ink)}.opening-screen h1 em,.hero h1 i{color:var(--rose);font-weight:400}.opening-date{letter-spacing:.25em;color:var(--gold);font-size:13px}.opening-copy{line-height:1.9;color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:21px;margin:22px 0}.open-button{border:1px solid var(--gold);background:var(--ink);color:#fff9ee;padding:14px 24px;letter-spacing:.08em;font-size:11px;text-transform:uppercase;cursor:pointer;transition:.25s}.open-button:hover{background:var(--gold);transform:translateY(-2px)}.open-button span{margin-left:12px}.tiny-note{font-size:9px;letter-spacing:.18em;color:#9b8c76;text-transform:uppercase;margin-top:28px}.site-header{height:76px;padding:0 clamp(20px,6vw,90px);display:flex;align-items:center;justify-content:space-between;background:#faf7f0eF;position:sticky;top:0;z-index:10;border-bottom:1px solid #e8decd;backdrop-filter:blur(12px)}.brand{font:600 27px 'Cormorant Garamond',serif;text-decoration:none}.brand span{color:var(--rose);font-style:italic}.site-header nav{display:flex;gap:27px}.site-header nav a,.music-button{font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted)}.site-header nav a:hover{color:var(--gold)}.music-button{background:none;border:0;cursor:pointer}.menu-toggle{display:none;background:none;border:0;font-size:25px;color:var(--ink)}.hero{min-height:670px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 20px 75px;position:relative;overflow:hidden;background:linear-gradient(180deg,#f5eddf,#fbf8f1 55%,#f1e8d8)}.hero:before,.hero:after{content:'❧';position:absolute;font-size:clamp(150px,25vw,300px);color:#b89a69;opacity:.11;top:15%;left:-4%;transform:rotate(-40deg)}.hero:after{left:auto;right:-4%;transform:scaleX(-1) rotate(-40deg)}.hero>*{position:relative;z-index:1}.hero-emblem{width:125px;height:125px;font-size:49px;margin:30px auto}.script-line{font:italic 23px 'Cormorant Garamond',serif;color:var(--rose);margin:0}.hero h1{margin:13px 0 18px}.hero-subtitle{font:20px 'Cormorant Garamond',serif;color:var(--muted);max-width:420px;line-height:1.4}.hero-date{display:flex;align-items:center;gap:15px;margin:34px 0 26px;color:var(--gold);font-size:11px;letter-spacing:.17em}.hero-date strong{font:500 55px 'Cormorant Garamond',serif;color:var(--ink);border-left:1px solid var(--line);border-right:1px solid var(--line);padding:0 20px}.text-link{font-size:10px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:8px}.countdown-section,.family-section,.wishes-section{padding:100px 22px;text-align:center}.countdown-section{background:#fdfbf6}.section-heading{text-align:center;margin-bottom:42px}.section-heading h2,.countdown-section h2,.closing-section h2{font:500 clamp(36px,5vw,54px)/1.05 'Cormorant Garamond',serif;margin:10px 0;color:var(--ink)}.section-intro{font:19px 'Cormorant Garamond',serif;color:var(--muted);margin:12px auto;max-width:540px}.countdown{display:flex;align-items:center;justify-content:center;gap:clamp(12px,4vw,38px);margin:45px auto}.countdown div{display:flex;flex-direction:column;gap:7px;min-width:54px}.countdown strong{font:500 clamp(36px,6vw,56px) 'Cormorant Garamond',serif}.countdown span{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold)}.countdown>b{font:30px 'Cormorant Garamond',serif;color:#c6ae87;margin-top:-15px}.blessing-quote{font:italic 21px 'Cormorant Garamond',serif;color:var(--rose);margin:40px auto 0}.couple-section{padding:95px 7%;background:#eee5d6}.couple-layout{max-width:980px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:8%}.photo-placeholder{min-height:440px;background:linear-gradient(145deg,#e2d3bc,#f9f2e5 48%,#d7c3a4);display:flex;flex-direction:column;align-items:center;justify-content:center;border:9px solid #fbf7ef;outline:1px solid #cdb78f;outline-offset:-17px;color:#8f7855}.photo-icon{font:70px 'Cormorant Garamond',serif}.photo-placeholder small,.photo-placeholder em{font-size:11px;letter-spacing:.1em;margin:8px}.photo-placeholder em{font-size:9px;color:#9d8b70}.couple-copy{text-align:center}.small-flourish{font-size:34px;color:var(--gold)}.couple-copy h3{font:500 44px 'Cormorant Garamond',serif;margin:12px 0}.couple-copy h3 i{color:var(--rose)}.couple-copy p{font:19px/1.8 'Cormorant Garamond',serif;color:var(--muted)}.couple-copy .signature{font-style:italic;color:var(--rose)}.events-section{padding:100px 5%;background:#faf7f0}.event-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.event-card{position:relative;text-align:center;padding:42px 24px 30px;border:1px solid var(--line);background:#fffdf8;min-height:490px;display:flex;flex-direction:column;align-items:center}.event-card.featured{background:#f1e7d6;border-color:#b99862;transform:translateY(-12px)}.event-number{position:absolute;top:13px;right:17px;font:italic 18px 'Cormorant Garamond',serif;color:#b9a27c}.event-card h3{font:500 36px 'Cormorant Garamond',serif;margin:8px 0}.event-date{font:500 58px 'Cormorant Garamond',serif;line-height:1;color:var(--rose);margin:15px 0 5px}.event-date span{font:11px 'DM Sans',sans-serif;letter-spacing:.2em;vertical-align:middle;color:var(--gold)}.event-day{font-size:11px;color:var(--muted)}.event-divider{height:1px;width:55px;background:var(--gold);margin:18px}.event-card h4{font:600 17px 'Cormorant Garamond',serif;margin:0 0 8px}.event-card>p:not(.eyebrow):not(.event-day):not(.lagna){font:15px/1.6 'Cormorant Garamond',serif;color:var(--muted);margin:0}.lagna{font-size:11px;color:var(--rose);letter-spacing:.1em}.event-actions{display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:22px}.event-actions a{font-size:10px;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;color:var(--gold);border-bottom:1px solid #d8c7a8;padding-bottom:5px}.family-section{background:#f0e7d9}.family-grid{max-width:850px;display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:auto}.family-card{padding:36px 20px;background:#fbf8f1;border:1px solid var(--line)}.family-card>span{font-size:30px;color:var(--gold)}.family-card h3{font:500 30px 'Cormorant Garamond',serif;margin:12px}.family-card>p:not(.eyebrow){font:21px/1.5 'Cormorant Garamond',serif;margin:10px}.family-card small{color:var(--rose)}.family-card .family-address{font:13px/1.7 'DM Sans',sans-serif!important;color:var(--muted);margin-top:25px!important}.family-note{font:italic 20px 'Cormorant Garamond',serif;color:var(--rose);max-width:620px;margin:40px auto 0}.gallery-section{padding:100px 7%;background:#fcfaf5}.gallery-grid{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.gallery-placeholder{border:0;min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#8c7653;cursor:pointer;background:linear-gradient(145deg,#e8ddcb,#f9f4eb)}.gallery-placeholder:nth-child(even){background:linear-gradient(145deg,#d9c7b0,#f3eadd);transform:translateY(20px)}.gallery-placeholder span{font:44px 'Cormorant Garamond',serif}.gallery-placeholder small{font-size:9px;text-transform:uppercase;letter-spacing:.12em}.lightbox{position:fixed;inset:0;background:#2d251feF;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center}.lightbox button{position:absolute;top:25px;right:30px;background:none;border:0;color:white;font-size:38px}.lightbox p{font:40px 'Cormorant Garamond',serif}.lightbox span{font-size:12px;color:#e5d7c2}.wishes-section{background:#f0e7d9}.wish-form{max-width:520px;margin:auto;display:flex;flex-direction:column;gap:13px}.wish-form input,.wish-form textarea{border:1px solid #d7c8af;background:#fffdf8;padding:15px;color:var(--ink);outline:none}.wish-form textarea{min-height:120px;resize:vertical}.wish-form .open-button{align-self:center}.local-note{font-size:10px;color:var(--muted);margin-top:18px}.wish-list{max-width:760px;margin:40px auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.wish-list article{background:#fbf8f1;padding:22px;text-align:left;border:1px solid var(--line)}.wish-list article p{font:italic 19px 'Cormorant Garamond',serif}.wish-list article strong,.wish-list article small{display:block;font-size:11px;color:var(--gold)}.wish-list article small{margin-top:6px;color:var(--muted)}.closing-section{text-align:center;padding:95px 20px;background:linear-gradient(180deg,#f8f1e4,#eee1cb)}.closing-emblem{width:92px;height:92px;font-size:38px}.closing-section h2{max-width:550px;margin:15px auto}.closing-section>p:not(.eyebrow){font:19px/1.7 'Cormorant Garamond',serif;color:var(--muted)}.closing-section>a{display:inline-block;margin-top:25px;font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--gold)}footer{display:flex;justify-content:space-between;padding:20px 6%;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#897a65;background:#e9ddca}
+@media(max-width:800px){.site-header{height:65px}.menu-toggle{display:block;margin-left:auto;margin-right:18px}.site-header nav{display:none;position:absolute;top:65px;left:0;right:0;background:#faf7f0;padding:22px;flex-direction:column;gap:20px;border-bottom:1px solid var(--line)}.site-header nav.show{display:flex}.music-button{font-size:9px}.couple-layout{grid-template-columns:1fr;gap:35px}.photo-placeholder{min-height:380px;max-width:480px;width:100%;margin:auto}.couple-copy{max-width:540px;margin:auto}.event-grid{grid-template-columns:1fr;max-width:480px}.event-card.featured{transform:none}.event-card{min-height:450px}.gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-placeholder{min-height:220px}.gallery-placeholder:nth-child(even){transform:none}}
+@media(max-width:480px){.hero{min-height:600px}.hero-date{gap:8px}.hero-date strong{font-size:46px;padding:0 12px}.hero-date span{font-size:9px}.countdown{gap:10px}.countdown div{min-width:48px}.countdown strong{font-size:34px}.countdown>b{font-size:22px}.family-grid{grid-template-columns:1fr}.gallery-grid{gap:9px}.gallery-placeholder{min-height:170px}.wish-list{grid-template-columns:1fr}.countdown-section,.family-section,.wishes-section,.events-section,.gallery-section{padding-top:75px;padding-bottom:75px}footer{gap:10px;flex-direction:column;text-align:center}}
+
+/* Couple photographs */
+.couple-photo{min-height:440px;max-height:620px;overflow:hidden;border:9px solid #fbf7ef;outline:1px solid #cdb78f;outline-offset:-17px;background:#e8ddcb;box-shadow:0 18px 45px #5c432018}
+.couple-photo img{display:block;width:100%;height:100%;min-height:440px;max-height:620px;object-fit:cover;object-position:center 35%}
+.gallery-photo{padding:0;border:7px solid #fffaf1;outline:1px solid #d3c19f;outline-offset:-13px;min-height:270px;overflow:hidden;background:#e8ddcb;cursor:zoom-in;box-shadow:0 8px 24px #5c432014;transition:transform .25s,box-shadow .25s}
+.gallery-photo:hover{transform:translateY(-5px);box-shadow:0 15px 30px #5c432025}
+.gallery-photo img{width:100%;height:100%;min-height:270px;display:block;object-fit:cover}
+.gallery-1 img{object-position:center 28%}
+.gallery-2 img{object-position:center 30%}
+.gallery-3 img{object-position:center 35%}
+.gallery-4 img{object-position:center 28%}
+.lightbox{padding:55px 22px 30px}
+.lightbox img{max-width:min(92vw,1000px);max-height:82vh;object-fit:contain;border:8px solid #fffaf1;box-shadow:0 15px 60px #0008}
+@media(max-width:800px){.couple-photo{min-height:380px;max-width:480px;width:100%;margin:auto}.couple-photo img{min-height:380px}.gallery-photo,.gallery-photo img{min-height:220px}}
+@media(max-width:480px){.gallery-photo,.gallery-photo img{min-height:170px}.couple-photo,.couple-photo img{min-height:360px}}
+
+
+/* ==========================================
+   MANOJ & LAVANYA
+   off-white • BEIGE • SOFT PISTA WEDDING THEME
+   ========================================== */
+
+:root {
+  --ink: #514c3f;
+  --muted: #827b6d;
+  --gold: #aa9567;
+  --line: #ded7c5;
+  --cream: #f7f5ed;
+  --rose: #a58b70;
+
+  --off-white: #f7f5ed;
+  --off-white: #ebe5d7;
+  --pista: #e5ebdc;
+  --pista-dark: #b8c6a8;
+  --antique-gold: #aa9567;
+}
+
+/* Main page background */
+body {
+  background: var(--off-white);
+  color: var(--ink);
+}
+
+/* Opening invitation */
+.opening-screen {
+  background:
+    radial-gradient(
+      ellipse at center,
+      #fffef9 0%,
+      #f7f5ed 65%,
+      #ebe5d7 100%
+    );
+}
+
+.opening-screen::before,
+.opening-screen::after {
+  color: var(--pista-dark);
+  opacity: 0.28;
+}
+
+.opening-ornament,
+.eyebrow,
+.opening-date,
+.small-flourish {
+  color: var(--antique-gold);
+}
+
+/* Names and monograms */
+.monogram,
+.hero-emblem,
+.closing-emblem {
+  color: var(--ink);
+  border-color: var(--antique-gold);
+  outline-color: #d4c5a4;
+}
+
+.monogram span,
+.hero-emblem span,
+.closing-emblem span,
+.opening-screen h1 em,
+.hero h1 i,
+.couple-copy h3 i {
+  color: #a58b70;
+}
+
+/* Buttons */
+.open-button {
+  background: var(--ink);
+  border-color: var(--antique-gold);
+  color: #fffdf6;
+}
+
+.open-button:hover {
+  background: var(--antique-gold);
+}
+
+/* Header */
+.site-header {
+  background: rgba(247, 245, 237, 0.96);
+  border-bottom-color: var(--line);
+}
+
+.site-header nav a:hover {
+  color: var(--antique-gold);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(
+    180deg,
+    #ebe5d7 0%,
+    #f7f5ed 55%,
+    #e5ebdc 100%
+  );
+}
+
+.hero::before,
+.hero::after {
+  color: var(--pista-dark);
+  opacity: 0.19;
+}
+
+.script-line {
+  color: #a58b70;
+}
+
+/* Countdown */
+.countdown-section {
+  background: #f7f5ed;
+}
+
+.countdown span {
+  color: var(--antique-gold);
+}
+
+.blessing-quote {
+  color: #a58b70;
+}
+
+/* Couple introduction */
+.couple-section {
+  background: #e5ebdc;
+}
+
+.photo-placeholder {
+  background: linear-gradient(
+    145deg,
+    #dce5d2,
+    #f7f5ed 48%,
+    #e5e0d1
+  );
+  border-color: #f7f5ed;
+  outline-color: var(--antique-gold);
+}
+
+.couple-copy .signature {
+  color: #a58b70;
+}
+
+/* Events */
+.events-section {
+  background: #f7f5ed;
+}
+
+.event-card {
+  background: #fffef9;
+  border-color: var(--line);
+}
+
+.event-card.featured {
+  background: #e5ebdc;
+  border-color: var(--antique-gold);
+}
+
+.event-date {
+  color: #a58b70;
+}
+
+.event-number,
+.event-actions a {
+  color: var(--antique-gold);
+}
+
+/* Family section */
+.family-section {
+  background: #ebe5d7;
+}
+
+.family-card {
+  background: #f9f8f1;
+  border-color: var(--line);
+}
+
+.family-card > span {
+  color: var(--antique-gold);
+}
+
+.family-card small,
+.family-note {
+  color: #a58b70;
+}
+
+/* Gallery */
+.gallery-section {
+  background: #f7f5ed;
+}
+
+.gallery-placeholder {
+  background: linear-gradient(
+    145deg,
+    #e5ebdc,
+    #f7f5ed
+  );
+}
+
+.gallery-placeholder:nth-child(even) {
+  background: linear-gradient(
+    145deg,
+    #ebe5d7,
+    #f7f5ed
+  );
+}
+
+/* Wishes */
+.wishes-section {
+  background: #e5ebdc;
+}
+
+.wish-form input,
+.wish-form textarea {
+  background: #fffef9;
+  border-color: #d5d9c9;
+  color: var(--ink);
+}
+
+.wish-list article {
+  background: #f9f8f1;
+  border-color: var(--line);
+}
+
+.wish-list article strong,
+.wish-list article small {
+  color: var(--antique-gold);
+}
+
+/* Closing section */
+.closing-section {
+  background: linear-gradient(
+    180deg,
+    #ebe5d7,
+    #f7f5ed
+  );
+}
+
+.closing-section a {
+  color: var(--antique-gold);
+}
+
+/* Footer */
+footer {
+  background: #e5ebdc;
+  color: var(--muted);
+}
+
+/* Smooth and consistent colour transitions */
+.open-button,
+.event-card,
+.family-card,
+.gallery-placeholder {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================
+   MANOJ & LAVANYA - BOTANICAL INVITATION
+   3D ENVELOPE OPENING ANIMATION
+   ========================================= */
+
+
+.opening-screen {
+  --half-card: min(50vw, 27.9svh);
+
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 100svh;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+  perspective: 1600px;
+  background: #f7f5ed;
+  isolation: isolate;
+}
+
+.opening-screen::before,
+.opening-screen::after {
+  display: none;
+}
+
+.opening-panel {
+  position: absolute;
+  top: 0;
+  width: var(--half-card);
+  height: 100%;
+  z-index: 2;
+
+  background-image: url('/images/Tap_to_Open_Botanical_Wax_Seal.png');
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  transition:
+    transform 1.45s cubic-bezier(.65, 0, .35, 1),
+    opacity .3s ease 1.1s;
+
+  will-change: transform;
+}
+
+.opening-panel-left {
+  left: calc(50% - var(--half-card));
+  background-position: left center;
+  transform-origin: left center;
+}
+
+.opening-panel-right {
+  left: 50%;
+  background-position: right center;
+  transform-origin: right center;
+}
+
+.opening-seal-button {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(44vw, 220px, 24.5svh);
+  height: min(25vh, 220px);
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.opening-screen.opening .opening-panel-left {
+  transform: rotateY(-115deg);
+  opacity: .8;
+}
+
+.opening-screen.opening .opening-panel-right {
+  transform: rotateY(115deg);
+  opacity: .8;
+}
+
+/* Hide the seal interaction while opening */
+.opening-screen.opening .opening-seal-button {
+  pointer-events: none;
+  animation: seal-release .55s ease forwards;
+}
+
+.opening-screen.opening .opening-hint {
+  opacity: 0;
+}
+
+@keyframes seal-release {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  45% {
+    opacity: .8;
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.65);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .opening-panel {
+    background-size: 200% auto;
+  }
+
+  .opening-seal-button {
+    width: 65vw;
+    height: 25vh;
+  }
+
+  .opening-hint {
+    bottom: 16px;
+    font-size: 8px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .opening-panel {
+    transition-duration: .35s;
+  }
+}
+
+
+/* =========================================
+   PORTRAIT INVITATION - NATURAL PROPORTIONS
+   ========================================= */
+.opening-screen {
+  --card-width: min(100vw, 55.8svh);
+  --card-height: min(100svh, 179.2vw);
+  min-height: 100svh;
+  height: 100svh;
+  padding: 0;
+  display: block;
+  background: #f7f5ed;
+}
+.opening-panel {
+  top: calc(50% - var(--card-height) / 2);
+  height: var(--card-height);
+  width: calc(var(--card-width) / 2);
+  background-size: 200% 100%;
+}
+.opening-panel-left {
+  left: calc(50% - var(--card-width) / 2);
+  background-position: left center;
+}
+.opening-panel-right {
+  left: 50%;
+  right: auto;
+  background-position: right center;
+}
+.opening-seal-button {
+  top: 50%;
+  left: 50%;
+  width: min(44vw, 220px, 24.5svh);
+  height: min(25vh, 220px);
+}
+.opening-hint {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: #9a835d;
+  letter-spacing: .18em;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+@media (min-aspect-ratio: 0.56/1) {
+  .opening-screen { --card-width: min(100vw, 55.8svh); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .opening-panel { transition-duration: .35s; }
+}
+
+/* Scratch-to-reveal invitation card */
+
+/* ==========================================
+   MANOJ & LAVANYA
+   HEART-SHAPED SCRATCH INVITATION
+   ========================================== */
+
+.scratch-definitions {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.scratch-section {
+  width: 100%;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f5ed;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.scratch-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* The complete heart-shaped card */
+.scratch-card {
+  position: relative;
+  isolation: isolate;
+
+  width: min(88vw, 430px);
+  aspect-ratio: 1 / 0.94;
+  height: auto;
+  min-height: 0;
+
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+
+  clip-path: url(#heartClip);
+
+  background-image:
+    linear-gradient(
+      rgba(247, 245, 237, 0.12),
+      rgba(247, 245, 237, 0.12)
+    ),
+    url('/images/Background_02.jpeg');
+
+  background-size: cover;
+  background-position: center;
+
+  border: none;
+  outline: none;
+  box-shadow: 0 18px 45px #5c432018;
+}
+
+/* Small heading */
+.scratch-card > .eyebrow {
+  position: absolute;
+  z-index: 1;
+
+  top: 28%;
+  left: 10%;
+  width: 80%;
+
+  margin: 0;
+  text-align: center;
+
+  color: #aa9567;
+  font-size: 10px;
+  letter-spacing: .2em;
+}
+
+/* Invitation heading */
+.scratch-card h2 {
+  position: absolute;
+  z-index: 1;
+
+  top: 35%;
+  left: 12%;
+  width: 76%;
+
+  margin: 0;
+
+  color: #514c3f;
+  font: 500 clamp(22px, 4vw, 30px)/1.15
+    'Cormorant Garamond', serif;
+
+  text-align: center;
+}
+
+/* Hidden message underneath the coating */
+.scratch-message {
+  position: absolute;
+  z-index: 1;
+
+  top: 53%;
+  left: 50%;
+  width: 58%;
+
+  margin: 0;
+  transform: translateX(-50%);
+
+  color: #786d5e;
+  font: 17px/1.55 'Cormorant Garamond', serif;
+  text-align: center;
+}
+
+.scratch-message strong {
+  display: inline-block;
+  margin-top: 12px;
+
+  color: #aa9567;
+  font: 600 10px 'DM Sans', sans-serif;
+  letter-spacing: .12em;
+}
+
+/* Gold scratch coating */
+.scratch-layer {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  z-index: 3;
+
+  clip-path: url(#heartClip);
+
+  cursor: crosshair;
+  touch-action: none;
+}
+
+/* Mobile sizing */
+@media (max-width: 600px) {
+  .scratch-section {
+    padding: 75px 14px;
+  }
+
+  .scratch-card {
+    width: min(90vw, 390px);
+  }
+
+  .scratch-card h2 {
+    font-size: clamp(21px, 6vw, 27px);
+  }
+
+  .scratch-message {
+    width: 60%;
+    font-size: 15px;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .scratch-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/* Heart shape matching the supplied reference */
+.scratch-card {
+  width: min(88vw, 460px);
+  aspect-ratio: 1.11 / 1;
+  height: auto;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+  clip-path: url(#heartClip);
+  background-image: url('/images/Background_02.jpeg');
+  background-size: cover;
+  background-position: center;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.scratch-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: url(#heartClip);
+  z-index: 3;
+  touch-action: none;
+}
+
+@media (max-width: 600px) {
+  .scratch-card {
+    width: 88vw;
+    aspect-ratio: 1.11 / 1;
+  }
+}
+
+
+/* ==========================================
+   MANOJ & LAVANYA
+   INTERACTIVE WEDDING INVITATION BOOKLET
+   ========================================== */
+
+.booklet-section {
+  padding: 100px 20px;
+  background:
+    linear-gradient(
+      180deg,
+      #e5ebdc 0%,
+      #f7f5ed 50%,
+      #ebe5d7 100%
+    );
+  text-align: center;
+}
+
+.booklet {
+  width: min(92vw, 560px);
+  margin: 0 auto;
+  perspective: 1600px;
+  touch-action: pan-y;
+}
+
+.booklet-page {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.78 / 1;
+  min-height: 590px;
+  padding: 13px;
+  background: #fffdf7;
+  border: 1px solid #c9b58e;
+  box-shadow:
+    0 20px 55px #51452c18,
+    0 3px 10px #51452c0d;
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+.booklet-page::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid #ded1b6;
+  pointer-events: none;
+}
+
+.booklet-page-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 38px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  background:
+    linear-gradient(#f7f5ed30, #f7f5ed30),
+    url('/images/Background_02.jpeg') center / cover;
+}
+
+.booklet-page-inner::after {
+  content: "❧";
+  position: absolute;
+  bottom: 16px;
+  right: 22px;
+  font-size: 36px;
+  color: #aa9567;
+  opacity: .45;
+  transform: rotate(-30deg);
+  pointer-events: none;
+}
+
+.booklet-ornament {
+  margin: 0 0 24px;
+  color: #aa9567;
+  font: 30px 'Cormorant Garamond', serif;
+  letter-spacing: .2em;
+}
+
+.booklet-names {
+  margin: 25px 0;
+  color: #514c3f;
+  font: 500 clamp(42px, 8vw, 66px)/.95
+    'Cormorant Garamond', serif;
+}
+
+.booklet-names span,
+.booklet-couple-names span {
+  display: block;
+  margin: 9px 0;
+  color: #aa9567;
+  font-style: italic;
+  font-size: .65em;
+}
+
+.booklet-divider {
+  margin: 18px 0;
+  color: #aa9567;
+  font-size: 20px;
+}
+
+.booklet-script {
+  max-width: 340px;
+  color: #786d5e;
+  font: italic 20px/1.65 'Cormorant Garamond', serif;
+}
+
+.booklet-date {
+  margin-top: 28px;
+  color: #aa9567;
+  font-size: 11px;
+  letter-spacing: .2em;
+}
+
+.booklet-title {
+  max-width: 380px;
+  margin: 12px 0 20px;
+  color: #514c3f;
+  font: 500 clamp(34px, 6vw, 48px)/1.1
+    'Cormorant Garamond', serif;
+}
+
+.booklet-couple-names {
+  margin: 22px 0;
+  color: #514c3f;
+  font: 500 32px/1.1 'Cormorant Garamond', serif;
+}
+
+.booklet-family-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.booklet-family-grid div {
+  padding: 14px 8px;
+  border-top: 1px solid #d9cbb2;
+  border-bottom: 1px solid #d9cbb2;
+}
+
+.booklet-family-grid span {
+  color: #aa9567;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.booklet-family-grid p {
+  margin: 7px 0 0;
+  color: #786d5e;
+  font: 16px 'Cormorant Garamond', serif;
+}
+
+.booklet-date-large {
+  margin: 0;
+  color: #a58b70;
+  font: 500 76px/.95 'Cormorant Garamond', serif;
+}
+
+.booklet-month {
+  margin: 8px 0;
+  color: #aa9567;
+  font-size: 11px;
+  letter-spacing: .2em;
+}
+
+.booklet-day {
+  margin: 5px 0;
+  color: #786d5e;
+  font: 18px 'Cormorant Garamond', serif;
+}
+
+.booklet-time {
+  margin: 8px 0;
+  color: #514c3f;
+  font: 24px 'Cormorant Garamond', serif;
+}
+
+.booklet-lagna {
+  color: #a58b70;
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+
+.booklet-venue {
+  margin: 14px 0 8px;
+  color: #514c3f;
+  font: 500 25px 'Cormorant Garamond', serif;
+}
+
+.booklet-address {
+  color: #786d5e;
+  font: 16px/1.65 'Cormorant Garamond', serif;
+}
+
+.booklet-map-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #aa9567;
+  color: #987c4d;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.booklet-footer-note {
+  margin-top: 24px;
+  color: #a58b70;
+  font: italic 16px 'Cormorant Garamond', serif;
+}
+
+.booklet-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px auto 0;
+}
+
+.booklet-arrow {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #aa9567;
+  border-radius: 50%;
+  background: transparent;
+  color: #786d5e;
+  font-size: 21px;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.booklet-arrow:hover:not(:disabled) {
+  background: #aa9567;
+  color: white;
+  transform: scale(1.06);
+}
+
+.booklet-arrow:disabled {
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+.booklet-indicators {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.booklet-indicators button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #cbbd9f;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.booklet-indicators button.active {
+  width: 23px;
+  border-radius: 10px;
+  background: #aa9567;
+}
+
+.booklet-hint {
+  margin-top: 17px;
+  color: #91846f;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+/* Page-turn entrance animation */
+.booklet-page.turn-next {
+  animation: bookletNext .48s ease both;
+}
+
+.booklet-page.turn-previous {
+  animation: bookletPrevious .48s ease both;
+}
+
+@keyframes bookletNext {
+  from {
+    opacity: .45;
+    transform: rotateY(-9deg) translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0) translateX(0);
+  }
+}
+
+@keyframes bookletPrevious {
+  from {
+    opacity: .45;
+    transform: rotateY(9deg) translateX(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0) translateX(0);
+  }
+}
+
+/* Responsive booklet */
+@media (max-width: 600px) {
+  .booklet-section {
+    padding: 75px 14px;
+  }
+
+  .booklet {
+    width: 94vw;
+  }
+
+  .booklet-page {
+    aspect-ratio: .72 / 1;
+    min-height: 540px;
+    padding: 9px;
+  }
+
+  .booklet-page-inner {
+    padding: 30px 16px;
+  }
+
+  .booklet-title {
+    font-size: 34px;
+  }
+
+  .booklet-names {
+    font-size: 45px;
+  }
+
+  .booklet-date-large {
+    font-size: 65px;
+  }
+
+  .booklet-family-grid {
+    gap: 7px;
+  }
+
+  .booklet-family-grid p {
+    font-size: 14px;
+  }
+
+  .booklet-address {
+    font-size: 14px;
+  }
+
+  .booklet-venue {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .booklet-page.turn-next,
+  .booklet-page.turn-previous {
+    animation: none;
+  }
+}
+
+
+/* =========================================
+   RSVP SECTION — IVORY & PISTA THEME
+========================================= */
+
+.rsvp-section {
+  padding: 100px 24px;
+  background: #f7f5ed;
+  text-align: center;
+}
+
+.rsvp-form {
+  width: min(100%, 570px);
+  margin: 42px auto 0;
+  padding: 38px;
+  background: #fffefa;
+  border: 1px solid #e5dfd0;
+  border-radius: 5px;
+  box-shadow: 0 15px 45px rgba(81, 76, 63, 0.06);
+  text-align: left;
+}
+
+.rsvp-field {
+  margin-bottom: 24px;
+}
+
+.rsvp-field > label {
+  display: block;
+  margin-bottom: 10px;
+  color: #514c3f;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rsvp-field input:not([type="radio"]),
+.rsvp-field select,
+.rsvp-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #ded8c9;
+  border-radius: 3px;
+  outline: none;
+  background: #fbfaf6;
+  color: #514c3f;
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rsvp-field input:focus,
+.rsvp-field select:focus,
+.rsvp-field textarea:focus {
+  border-color: #aa9567;
+  box-shadow: 0 0 0 3px rgba(170, 149, 103, 0.12);
+}
+
+.rsvp-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.rsvp-choice-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.rsvp-choice-group label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid #ded8c9;
+  border-radius: 3px;
+  background: #fbfaf6;
+  color: #514c3f;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.rsvp-choice-group label.chosen {
+  border-color: #aa9567;
+  background: #f2f1e8;
+}
+
+.rsvp-choice-group input {
+  accent-color: #aa9567;
+}
+
+.rsvp-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid #aa9567;
+  border-radius: 2px;
+  background: #aa9567;
+  color: #fffefa;
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.rsvp-submit:hover {
+  background: #8f7b53;
+  border-color: #8f7b53;
+}
+
+.rsvp-note {
+  margin: 22px auto 0;
+  color: #91846f;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.rsvp-success {
+  width: min(100%, 570px);
+  box-sizing: border-box;
+  margin: 42px auto 0;
+  padding: 48px 30px;
+  border: 1px solid #d9ddce;
+  background: #eef0e7;
+  color: #514c3f;
+}
+
+.rsvp-success-icon {
+  margin-bottom: 15px;
+  color: #aa9567;
+  font-size: 38px;
+}
+
+.rsvp-success h3 {
+  margin: 12px 0;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.rsvp-success p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.rsvp-success-signature {
+  margin-top: 25px;
+  color: #8f7b53;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .rsvp-section {
+    padding: 75px 16px;
+  }
+
+  .rsvp-form {
+    padding: 25px 18px;
+  }
+
+  .rsvp-choice-group {
+    grid-template-columns: 1fr;
+  }
+
+  .rsvp-success {
+    padding: 38px 20px;
+  }
+}
+
+/* ==========================================
+   MANOJ & LAVANYA
+   DELICATE SPARKLE TRAIL & FALLING PETALS
+   ========================================== */
+
+/* Decorative layers never interfere with website interactions */
+
+.petal-layer,
+.sparkle-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.petal-layer {
+  z-index: 12;
+}
+
+.sparkle-layer {
+  z-index: 100;
+}
+
+/* Cursor sparkles */
+
+.cursor-sparkle {
+  position: fixed;
+  display: block;
+  color: #b69a68;
+  font-size: var(--sparkle-size, 13px);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  text-shadow: 0 0 7px #d8c49a, 0 0 13px #fff4d8;
+  transform: translate(-50%, -50%);
+  animation: cursorSparkleFade 850ms ease-out forwards;
+}
+
+@keyframes cursorSparkleFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15) rotate(25deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -75%) scale(0.25) rotate(90deg);
+  }
+}
+
+/* Falling flower petals */
+
+.falling-petal {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  display: block;
+  color: var(--petal-colour, #eadbd1);
+  font-size: var(--petal-size, 18px);
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  text-shadow: 0 2px 5px #8b79601c;
+  will-change: transform, opacity;
+
+  animation:
+    petalDrift var(--petal-duration, 15s) linear forwards;
+}
+
+@keyframes petalDrift {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0) rotate(0deg);
+  }
+
+  10% {
+    opacity: 0.75;
+  }
+
+  80% {
+    opacity: 0.65;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate3d(var(--petal-drift, 40px), 110vh, 0)
+      rotate(var(--petal-rotation, 300deg));
+  }
+}
+
+/* Accessibility: respect reduced-motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+  .petal-layer,
+  .sparkle-layer {
+    display: none;
+  }
+}
+
+
+/* ==========================================
+   REALISTIC SILK ROSE PETALS
+   IVORY • CHAMPAGNE • SOFT PISTA
+   ========================================== */
+
+.falling-petal.fabric-petal {
+  width: var(--petal-width, 40px);
+  height: var(--petal-size, 42px);
+
+  border-radius: 72% 28% 68% 32% / 58% 38% 62% 42%;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      transparent 35%
+    ),
+    linear-gradient(
+      115deg,
+      #ffffff 0%,
+      var(--petal-colour) 48%,
+      #b8c6a8 120%
+    );
+
+  box-shadow:
+    inset 2px 3px 5px #ffffff9c,
+    inset -3px -4px 7px #8c987b40,
+    0 3px 8px #655b4530;
+
+  border: 1px solid #ffffff70;
+
+  position: absolute;
+}
+
+/* Delicate central fold on each fabric petal */
+
+.falling-petal.fabric-petal::after {
+  content: "";
+  position: absolute;
+
+  left: 48%;
+  top: 12%;
+  width: 1px;
+  height: 75%;
+
+  background: linear-gradient(
+    180deg,
+    transparent,
+    #ffffffa6,
+    #8c987b40,
+    transparent
+  );
+
+  transform: rotate(-13deg);
+  opacity: 0.75;
+}
+
+/* Keep the little flower blossoms too */
+
+.falling-petal.flower-petal {
+  font-size: var(--petal-size, 38px);
+  color: var(--petal-colour);
+  text-shadow: 0 3px 8px #8b796028;
+}
+/* Gold rose monogram image */
+.brand img {
+  width: 72px;
+  height: 58px;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-emblem.image-emblem {
+  width: min(250px, 65vw);
+  height: auto;
+  aspect-ratio: 1;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.hero-emblem.image-emblem img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.hero-ganesha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.hero-ganesha img {
+  width: 350px;
+  height: 65px;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+}
+
+/* Three independent flower scratch-to-reveal dates */
+.flower-reveal-wrap { width: min(100%, 1050px); margin: 0 auto; }
+.flower-reveal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 3vw, 34px);
+  width: 100%;
+  margin: 12px auto 0;
+}
+.flower-reveal-card {
+  position: relative;
+  min-width: 0;
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 10px;
+  border: 1px solid #ded7c5;
+  background: linear-gradient(160deg, #fffef9, #f0f2e8);
+  box-shadow: 0 12px 32px rgba(81, 76, 63, .06);
+}
+.flower-date { width: 100%; text-align: center; color: #514c3f; }
+.flower-event {
+  margin: 0 0 8px;
+  color: #8f7b53;
+  font: italic 20px 'Cormorant Garamond', serif;
+}
+.flower-day {
+  margin: 0;
+  color: #a58b70;
+  font: 500 clamp(48px, 6vw, 68px)/.95 'Cormorant Garamond', serif;
+}
+.flower-month { margin: 9px 0 6px; color: #aa9567; font-size: 10px; letter-spacing: .16em; }
+.flower-weekday { margin: 0; color: #827b6d; font: 13px/1.5 'DM Sans', sans-serif; }
+.flower-cover { position: absolute; inset: 0; display: grid; place-items: center; }
+.flower-scratch-layer {
+  display: block;
+  width: min(100%, 260px);
+  height: 250px;
+  touch-action: none;
+  cursor: grab;
+}
+.flower-scratch-layer:active { cursor: grabbing; }
+.flower-tap-hint {
+  position: absolute;
+  bottom: 13px;
+  color: #9a835d;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  pointer-events: none;
+  text-shadow: 0 1px 5px #fffdf6;
+}
+@media (max-width: 700px) {
+  .flower-reveal-grid { grid-template-columns: 1fr; max-width: 390px; gap: 16px; }
+  .flower-reveal-card { min-height: 270px; }
+  .flower-scratch-layer { height: 225px; }
+}
+
+
+/* Match the revealed date panel to the exact five-petal scratch-flower silhouette */
+.flower-clip-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.flower-reveal-grid {
+  align-items: center;
+}
+.flower-reveal-card {
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  display: block;
+  overflow: visible;
+}
+.flower-date {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18% 13%;
+  background: linear-gradient(145deg, #fffef9 0%, #f0f2e8 100%);
+  border: 0;
+  clip-path: url(#flowerClip);
+  -webkit-clip-path: url(#flowerClip);
+  z-index: 0;
+}
+.flower-event {
+  font-size: clamp(16px, 1.8vw, 21px);
+}
+.flower-day {
+  font-size: clamp(48px, 5vw, 66px);
+}
+.flower-month {
+  font-size: clamp(8px, .85vw, 10px);
+  text-align: center;
+}
+.flower-weekday {
+  font-size: clamp(9px, 1vw, 12px);
+  text-align: center;
+}
+.flower-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.flower-scratch-layer {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: grab;
+  pointer-events: auto;
+}
+.flower-tap-hint {
+  bottom: 14%;
+}
+@media (max-width: 700px) {
+  .flower-reveal-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    gap: 20px;
+  }
+  .flower-reveal-card {
+    min-height: 0;
+    width: 100%;
+  }
+  .flower-scratch-layer {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/* Scratch-only interaction and balanced flower proportions */
+.flower-scratch-layer { cursor: crosshair; }
+.flower-tap-hint { letter-spacing: .16em; }
+
+
+/* RSVP section – refined typography hierarchy */
+
+.rsvp-section .section-heading > .eyebrow,
+.rsvp-section .section-heading > h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #514c3f;
+}
+
+.rsvp-section .section-heading > .section-intro {
+  font-size: clamp(19px, 2vw, 24px);
+  line-height: 1.5;
+  color: #827b6d;
+}
+
+.rsvp-section .section-heading > .rsvp-note {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #9a896b;
+  letter-spacing: 0.04em;
+}
+
+.rsvp-section .section-heading {
+  gap: 16px;
+}
+/* Keepsake heading – smaller, matching the RSVP note */
+.rsvp-section .section-heading > h2 {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #827b6d;
+  text-transform: none;
+  margin-top: 0;
+}
+/* Floral monogram in the closing section */
+.closing-image-emblem {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 24px;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.closing-image-emblem img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* FINAL OVERRIDE: use the floral monogram in the closing section */
+.closing-section .closing-image-emblem {
+  display: block !important;
+  width: min(230px, 58vw) !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 24px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  overflow: visible !important;
+}
+
+.closing-section .closing-image-emblem img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+
+/* FINAL CLOSING LOGO — isolated from the old circular monogram styles */
+.closing-section .closing-logo {
+  display: block !important;
+  position: relative;
+  width: min(230px, 58vw) !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 24px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  overflow: visible !important;
+}
+.closing-section .closing-logo img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Gallery – larger photographs, centred alignment */
+.gallery-section .gallery-grid {
+  width: 100%;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.gallery-section .gallery-photo {
+  width: 100%;
+  min-height: 380px;
+  margin: 0;
+}
+
+.gallery-section .gallery-photo img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .gallery-section .gallery-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    gap: 20px;
+  }
+}
+
+/* ==========================================
+   CUSTOM ANTIQUE-GOLD SPARKLE MOUSE CURSOR
+   ========================================== */
+@media (hover: hover) and (pointer: fine) {
+  html,
+  body,
+  body *,
+  body *::before,
+  body *::after {
+    cursor: none !important;
+  }
+
+  .custom-sparkle-cursor {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    z-index: 1000000;
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    color: #aa9567;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(0deg) scale(.8);
+    text-shadow:
+      0 0 5px rgba(216, 196, 154, .9),
+      0 0 12px rgba(255, 244, 216, .85),
+      0 0 20px rgba(170, 149, 103, .35);
+    transition: opacity .12s ease, transform .12s ease;
+    will-change: left, top, transform;
+  }
+
+  .custom-sparkle-cursor.is-visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(18deg) scale(1);
+  }
+}
+
+/* Touch devices keep their normal touch interaction and do not show a cursor. */
+@media (hover: none), (pointer: coarse) {
+  .custom-sparkle-cursor {
+    display: none !important;
+  }
+}
+
+
+/* Centre the scratch instruction inside each flower */
+.flower-tap-hint {
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: 80%;
+  text-align: center;
+}
+
+
+/* =========================================================
+   MANOJ & LAVANYA — FLOWER PETAL COLOUR PALETTE
+   Applied to the invitation content after the envelope opens
+   Ivory • Soft Pista • Antique Gold
+   ========================================================= */
+
+:root {
+  --ink: #514c3f;
+  --muted: #827b6d;
+  --gold: #aa9567;
+  --line: #d8cfba;
+  --cream: #fffdf5;
+  --rose: #aa9567;
+
+  --off-white: #fffdf5;
+  --pista: #e5ebdd;
+  --pista-dark: #b8c6a8;
+  --antique-gold: #c5aa76;
+
+  --petal-ivory: #fffdf5;
+  --petal-ivory-mid: #f5f0e4;
+  --petal-beige: #eae2d2;
+  --petal-pista: #e5ebdd;
+  --petal-pista-mid: #d2ddc4;
+  --petal-pista-deep: #b8c6a8;
+  --petal-gold-light: #d8c49a;
+  --petal-gold: #c5aa76;
+  --petal-gold-deep: #aa9567;
+}
+
+/* Main revealed-page canvas and typography */
+body {
+  background: var(--petal-ivory);
+  color: var(--ink);
+}
+
+/* Navigation */
+.site-header {
+  background: rgba(255, 253, 245, 0.96);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header nav a,
+.music-button {
+  color: var(--muted);
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible,
+.music-button:hover {
+  color: var(--petal-gold-deep);
+}
+
+/* Main couple introduction */
+.hero {
+  background: linear-gradient(
+    180deg,
+    var(--petal-ivory-mid) 0%,
+    var(--petal-ivory) 55%,
+    var(--petal-pista) 100%
+  );
+  color: var(--ink);
+}
+
+.hero::before,
+.hero::after {
+  color: var(--petal-pista-deep);
+}
+
+.hero h1,
+.hero h1 i,
+.section-heading h2,
+.countdown-section h2,
+.closing-section h2,
+.couple-copy h3,
+.event-card h3,
+.family-card h3 {
+  color: var(--ink);
+}
+
+.script-line,
+.blessing-quote,
+.couple-copy .signature,
+.event-date,
+.event-card .lagna,
+.family-card small,
+.family-note,
+.small-flourish,
+.eyebrow,
+.opening-date {
+  color: var(--petal-gold-deep);
+}
+
+/* Countdown */
+.countdown-section {
+  background: var(--petal-ivory);
+  color: var(--ink);
+}
+
+.countdown span,
+.countdown > b {
+  color: var(--petal-gold-deep);
+}
+
+/* Couple / story section */
+.couple-section {
+  background: var(--petal-pista);
+}
+
+.photo-placeholder {
+  background: linear-gradient(
+    145deg,
+    var(--petal-pista-mid),
+    var(--petal-ivory) 52%,
+    var(--petal-beige)
+  );
+  border-color: var(--petal-ivory);
+  outline-color: var(--petal-gold);
+  color: var(--ink);
+}
+
+.couple-copy p,
+.section-intro {
+  color: var(--muted);
+}
+
+/* Scratch flowers and reveal section */
+.scratch-section {
+  background: var(--petal-ivory);
+  color: var(--ink);
+}
+
+.scratch-card,
+.flower-reveal-card {
+  border-color: var(--petal-gold);
+}
+
+.scratch-date,
+.flower-reveal-date,
+.scratch-result {
+  color: var(--ink);
+}
+
+.scratch-instruction,
+.flower-scratch-hint {
+  color: var(--petal-gold-deep);
+}
+
+/* Events */
+.events-section {
+  background: var(--petal-ivory-mid);
+}
+
+.event-card {
+  background: var(--petal-ivory);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.event-card.featured {
+  background: var(--petal-pista);
+  border-color: var(--petal-gold);
+}
+
+.event-number,
+.event-actions a,
+.event-date span {
+  color: var(--petal-gold-deep);
+}
+
+.event-divider {
+  background: var(--petal-gold);
+}
+
+.event-card > p:not(.eyebrow):not(.event-day):not(.lagna),
+.event-day {
+  color: var(--muted);
+}
+
+/* Families */
+.family-section {
+  background: var(--petal-beige);
+}
+
+.family-card {
+  background: var(--petal-ivory);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.family-card > span {
+  color: var(--petal-gold-deep);
+}
+
+.family-card small,
+.family-note {
+  color: var(--petal-gold-deep);
+}
+
+/* Gallery */
+.gallery-section {
+  background: var(--petal-ivory);
+}
+
+.gallery-placeholder {
+  background: linear-gradient(
+    145deg,
+    var(--petal-pista-mid),
+    var(--petal-ivory)
+  );
+  color: var(--ink);
+}
+
+.gallery-placeholder:nth-child(even) {
+  background: linear-gradient(
+    145deg,
+    var(--petal-beige),
+    var(--petal-ivory)
+  );
+}
+
+.gallery-photo {
+  border-color: var(--petal-ivory);
+  outline-color: var(--petal-gold);
+  background: var(--petal-beige);
+}
+
+/* Lightbox */
+.lightbox {
+  background: rgba(81, 76, 63, 0.94);
+  color: var(--petal-ivory);
+}
+
+.lightbox span {
+  color: var(--petal-gold-light);
+}
+
+.lightbox img {
+  border-color: var(--petal-ivory);
+}
+
+/* Wishes / guest messages */
+.wishes-section {
+  background: var(--petal-pista);
+}
+
+.wish-form input,
+.wish-form textarea {
+  background: var(--petal-ivory);
+  border-color: var(--petal-pista-deep);
+  color: var(--ink);
+}
+
+.wish-form input::placeholder,
+.wish-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.wish-form input:focus,
+.wish-form textarea:focus {
+  border-color: var(--petal-gold);
+  outline-color: var(--petal-gold-light);
+}
+
+.wish-list article {
+  background: var(--petal-ivory);
+  border-color: var(--line);
+}
+
+.wish-list article strong,
+.wish-list article small {
+  color: var(--petal-gold-deep);
+}
+
+/* RSVP */
+.rsvp-section {
+  background: var(--petal-ivory);
+  color: var(--ink);
+}
+
+.rsvp-section input,
+.rsvp-section textarea,
+.rsvp-section select {
+  background: var(--petal-ivory);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.rsvp-section input:focus,
+.rsvp-section textarea:focus,
+.rsvp-section select:focus {
+  border-color: var(--petal-gold);
+  outline-color: var(--petal-gold-light);
+}
+
+/* Buttons */
+.open-button,
+.rsvp-section button,
+.wish-form button {
+  background: var(--petal-gold-deep);
+  border-color: var(--petal-gold);
+  color: var(--petal-ivory);
+}
+
+.open-button:hover,
+.rsvp-section button:hover,
+.wish-form button:hover {
+  background: var(--petal-gold);
+  color: var(--ink);
+}
+
+/* Closing message and footer */
+.closing-section {
+  background: linear-gradient(
+    180deg,
+    var(--petal-pista) 0%,
+    var(--petal-ivory-mid) 100%
+  );
+  color: var(--ink);
+}
+
+.closing-section a {
+  color: var(--petal-gold-deep);
+}
+
+footer {
+  background: var(--petal-pista);
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+/* Decorative outlines and accents */
+.monogram,
+.hero-emblem,
+.closing-emblem {
+  border-color: var(--petal-gold);
+  outline-color: var(--petal-gold-light);
+}
+
+hr,
+.event-divider {
+  border-color: var(--petal-gold-light);
+}
+
+/* Consistent transitions for the recoloured interface */
+.site-header,
+.event-card,
+.family-card,
+.gallery-placeholder,
+.wish-list article,
+.open-button {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================================
+   FINAL PALETTE OVERRIDE — IVORY • WARM CREAM • ANTIQUE GOLD
+   Keep the existing layout, photographs, animations and effects.
+   Replace every pista-green tint with warm ivory/cream/gold.
+   ========================================================= */
+
+:root {
+  --ink: #51483b;
+  --muted: #817564;
+  --gold: #bfa477;
+  --line: #dfd3bd;
+  --cream: #fbf8ef;
+  --rose: #bfa477;
+
+  --off-white: #fbf8ef;
+  --antique-gold: #bfa477;
+
+  /* Compatibility aliases for existing styles/scripts:
+     old pista variables now resolve to cream and antique gold. */
+  --pista: #eee5d5;
+  --pista-dark: #bfa477;
+  --petal-ivory: #fbf8ef;
+  --petal-ivory-mid: #f5efe3;
+  --petal-beige: #eee5d5;
+  --petal-pista: #eee5d5;
+  --petal-pista-mid: #e8ddca;
+  --petal-pista-deep: #bfa477;
+  --petal-gold-light: #d8c49e;
+  --petal-gold: #bfa477;
+  --petal-gold-deep: #9e8355;
+}
+
+/* Page and section backgrounds */
+body {
+  background-color: #fbf8ef !important;
+  color: #51483b !important;
+}
+
+.opening-screen {
+  background: radial-gradient(
+    ellipse at center,
+    #fffdf8 0%,
+    #fbf8ef 62%,
+    #eee5d5 100%
+  ) !important;
+}
+
+.hero {
+  background: linear-gradient(
+    180deg,
+    #eee5d5 0%,
+    #fbf8ef 55%,
+    #f5efe3 100%
+  ) !important;
+}
+
+.countdown-section,
+.scratch-section,
+.gallery-section,
+.rsvp-section {
+  background: #fbf8ef !important;
+}
+
+.couple-section,
+.family-section,
+.wishes-section {
+  background: #eee5d5 !important;
+}
+
+.events-section {
+  background: #f5efe3 !important;
+}
+
+.booklet-section {
+  background: linear-gradient(
+    180deg,
+    #eee5d5 0%,
+    #fbf8ef 50%,
+    #f5efe3 100%
+  ) !important;
+}
+
+.closing-section {
+  background: linear-gradient(
+    180deg,
+    #eee5d5 0%,
+    #fbf8ef 100%
+  ) !important;
+}
+
+footer {
+  background: #eee5d5 !important;
+  color: #817564 !important;
+  border-top: 1px solid #dfd3bd !important;
+}
+
+/* Warm cream cards — no green surfaces */
+.event-card,
+.family-card,
+.wish-list article,
+.rsvp-form,
+.gallery-placeholder,
+.flower-reveal-card {
+  background-color: #fbf8ef !important;
+  border-color: #dfd3bd !important;
+  color: #51483b !important;
+}
+
+.event-card.featured {
+  background: #eee5d5 !important;
+  border-color: #bfa477 !important;
+}
+
+.photo-placeholder,
+.couple-photo {
+  background: linear-gradient(
+    145deg,
+    #eee5d5 0%,
+    #fbf8ef 52%,
+    #e8ddca 100%
+  ) !important;
+  border-color: #fbf8ef !important;
+  outline-color: #bfa477 !important;
+}
+
+/* Gallery placeholders retain their original layout */
+.gallery-placeholder {
+  background: linear-gradient(
+    145deg,
+    #eee5d5 0%,
+    #fbf8ef 100%
+  ) !important;
+}
+
+.gallery-placeholder:nth-child(even) {
+  background: linear-gradient(
+    145deg,
+    #e8ddca 0%,
+    #fbf8ef 100%
+  ) !important;
+}
+
+/* Inputs, selected RSVP options and success message */
+input,
+textarea,
+select,
+.wish-form input,
+.wish-form textarea,
+.rsvp-field input:not([type="radio"]),
+.rsvp-field select,
+.rsvp-field textarea,
+.rsvp-choice-group label {
+  background-color: #fbf8ef !important;
+  border-color: #dfd3bd !important;
+  color: #51483b !important;
+}
+
+.rsvp-choice-group label.chosen {
+  background: #eee5d5 !important;
+  border-color: #bfa477 !important;
+}
+
+.rsvp-choice-group input {
+  accent-color: #bfa477 !important;
+}
+
+.rsvp-success {
+  background: #eee5d5 !important;
+  border-color: #dfd3bd !important;
+  color: #51483b !important;
+}
+
+/* Flower petals and decorative accents */
+.falling-petal.fabric-petal {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.92) 0%,
+      transparent 35%
+    ),
+    linear-gradient(
+      115deg,
+      #fffdf8 0%,
+      var(--petal-colour, #eee5d5) 52%,
+      #bfa477 125%
+    ) !important;
+  box-shadow:
+    inset 2px 3px 5px #ffffffa8,
+    inset -3px -4px 7px #9e835522,
+    0 3px 8px #655b4520 !important;
+  border-color: #ffffff80 !important;
+}
+
+.falling-petal.fabric-petal::after {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    #ffffffb0,
+    #bfa47735,
+    transparent
+  ) !important;
+}
+
+.falling-petal.flower-petal {
+  color: var(--petal-colour, #bfa477) !important;
+  text-shadow: 0 3px 8px #8b796020 !important;
+}
+
+/* Keep the original flower scratch coating antique gold */
+.flower-scratch-layer,
+.scratch-layer {
+  accent-color: #bfa477;
+}
+
+/* Gold outlines, typography and controls */
+.eyebrow,
+.opening-ornament,
+.opening-date,
+.script-line,
+.blessing-quote,
+.small-flourish,
+.event-date,
+.event-number,
+.event-actions a,
+.family-card small,
+.family-note,
+.booklet-ornament,
+.booklet-divider,
+.booklet-date,
+.booklet-month,
+.booklet-map-link,
+.closing-section a,
+.countdown span,
+.countdown > b {
+  color: #9e8355 !important;
+}
+
+.monogram,
+.hero-emblem,
+.closing-emblem {
+  border-color: #bfa477 !important;
+  outline-color: #d8c49e !important;
+}
+
+.monogram span,
+.hero-emblem span,
+.closing-emblem span,
+.opening-screen h1 em,
+.hero h1 i,
+.couple-copy h3 i {
+  color: #bfa477 !important;
+}
+
+.open-button,
+.rsvp-section button,
+.wish-form button,
+.rsvp-submit {
+  background: #bfa477 !important;
+  border-color: #bfa477 !important;
+  color: #fffdf8 !important;
+}
+
+.open-button:hover,
+.rsvp-section button:hover,
+.wish-form button:hover,
+.rsvp-submit:hover {
+  background: #9e8355 !important;
+  border-color: #9e8355 !important;
+  color: #fffdf8 !important;
+}
+
+.booklet-arrow {
+  border-color: #bfa477 !important;
+}
+
+.booklet-arrow:hover:not(:disabled),
+.booklet-indicators button.active {
+  background: #bfa477 !important;
+}
+
+.booklet-indicators button {
+  background: #d8c49e !important;
+}
+
+/* Header keeps its existing sticky positioning and blur */
+.site-header {
+  background: rgba(251, 248, 239, 0.96) !important;
+  border-bottom-color: #dfd3bd !important;
+}
+
+/* Sparkle cursor stays warm gold */
+.cursor-sparkle {
+  color: #bfa477 !important;
+  text-shadow: 0 0 7px #d8c49e, 0 0 13px #fff4d8 !important;
+}
+
+/* Remove old hard-coded green tones from decorative flower details */
+.opening-screen::before,
+.opening-screen::after,
+.hero::before,
+.hero::after {
+  color: #bfa477 !important;
+}
+
+/* Mobile and reduced-motion behaviour remain as originally defined. */
+
+/* =========================================================
+   RESTORED FAMILY FLOWERS — IVORY, WARM CREAM & ANTIQUE GOLD
+   The family-card SVGs are decorative flowers, not dark fills.
+   ========================================================= */
+.family-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.family-card .family-flower {
+  display: block;
+  width: clamp(112px, 15vw, 158px);
+  height: clamp(112px, 15vw, 158px);
+  margin: 0 auto 14px;
+  color: #bfa477;
+  opacity: .94;
+  animation: familyFlowerFloat 6s ease-in-out infinite;
+  filter: drop-shadow(0 5px 9px rgba(158, 131, 85, .14));
+}
+
+.family-card:nth-child(2) .family-flower {
+  animation-delay: -3s;
+}
+
+.family-card .family-flower svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.family-card .family-flower svg path {
+  fill: #eee5d5;
+  stroke: #bfa477;
+  stroke-width: .012;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+@keyframes familyFlowerFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .family-card .family-flower {
+    animation: none;
+  }
+}
+
+
+
+/* Groom's family details inside an additional scratch-to-reveal flower.
+   Existing canvas scratch interaction and animation timing remain unchanged. */
+@media (min-width: 701px) {
+  .flower-family-card { grid-column: 2; }
+}
+.flower-family-date { padding: 17% 12% !important; }
+.flower-family-date .flower-event {
+  margin-bottom: 7px;
+  font-size: clamp(13px, 1.55vw, 18px);
+  letter-spacing: .02em;
+}
+.flower-family-names {
+  margin: 2px 0 8px;
+  color: #514c3f;
+  font: 500 clamp(14px, 1.65vw, 19px)/1.22 'Cormorant Garamond', serif;
+  text-align: center;
+}
+.flower-family-names span {
+  display: inline-block;
+  margin: 2px 0;
+  color: #aa9567;
+  font-style: italic;
+}
+.flower-family-address {
+  margin: 0;
+  color: #786d5e;
+  font: clamp(8px, .88vw, 10px)/1.45 'DM Sans', sans-serif;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .flower-family-date { padding: 17% 12% !important; }
+  .flower-family-names { font-size: 17px; }
+  .flower-family-address { font-size: 9px; }
+}
+
+
+/* Family details centred inside the animated flower silhouettes.
+   Transparent card wrappers remove the old rectangular panels. */
+.family-grid {
+  max-width: 900px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 4vw, 42px);
+  align-items: center;
+}
+.family-card {
+  position: relative;
+  width: 100%;
+  min-height: 390px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.family-card .family-flower {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: min(100%, 390px);
+  height: min(100%, 390px);
+  margin: auto;
+  animation: familyFlowerFloat 6s ease-in-out infinite;
+  opacity: .98;
+}
+.family-card:nth-child(2) .family-flower { animation-delay: -3s; }
+.family-card .family-flower svg { width: 100%; height: 100%; display: block; }
+.family-card .family-flower svg path {
+  fill: #fbf8ef;
+  stroke: #bfa477;
+  stroke-width: .012;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.family-card-content {
+  position: relative;
+  z-index: 1;
+  width: 76%;
+  max-width: 300px;
+  padding: 18px 8px;
+  text-align: center;
+}
+.family-card-content .eyebrow {
+  margin: 0 0 9px;
+  color: #9a835d;
+  font-size: 9px;
+  letter-spacing: .17em;
+}
+.family-card-content .family-names {
+  margin: 0;
+  color: #514c3f;
+  font: 500 clamp(17px, 2vw, 23px)/1.18 'Cormorant Garamond', serif;
+}
+.family-card-content .family-names span {
+  display: inline-block;
+  margin: 3px 0;
+  color: #aa9567;
+  font-style: italic;
+}
+.family-card-content .family-address {
+  margin: 12px 0 0 !important;
+  color: #786d5e;
+  font: 10px/1.45 'DM Sans', sans-serif !important;
+}
+@media (max-width: 700px) {
+  .family-grid { grid-template-columns: 1fr; max-width: 390px; gap: 12px; }
+  .family-card { min-height: 350px; }
+  .family-card .family-flower { width: min(100%, 350px); height: min(100%, 350px); }
+  .family-card-content { width: 75%; }
+  .family-card-content .family-address { font-size: 9px !important; }
+}
+
+
+/* Couple message typography — larger on desktop, balanced on mobile */
+.couple-copy p:not(.signature) {
+  font-size: 23px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .couple-copy p:not(.signature) {
+    font-size: 20px;
+  }
+}
+
+
+
+/* ==========================================
+   HERO REFINEMENT — CLASSIC ROYAL ELEGANCE
+   Scope: navigation and opening hero only.
+   Existing layout, logo, imagery and animations
+   are intentionally preserved.
+   ========================================== */
+
+.site-header nav a,
+.site-header .music-button {
+  color: #756b5d;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible,
+.site-header .music-button:hover {
+  color: #9e8355;
+}
+
+.hero {
+  background: linear-gradient(
+    180deg,
+    #eee5d5 0%,
+    #fbf8ef 48%,
+    #fbf8ef 100%
+  ) !important;
+  color: #494238;
+}
+
+.hero .eyebrow {
+  color: #9e8355 !important;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.16em;
+  line-height: 1.9;
+}
+
+.hero .script-line {
+  color: #827664 !important;
+  font: 400 clamp(22px, 2.5vw, 27px)/1.25 'Cormorant Garamond', serif;
+  margin: 0 0 4px;
+}
+
+.hero h1 {
+  color: #494238 !important;
+  font: 400 clamp(48px, 8vw, 84px)/0.98 'Cormorant Garamond', serif;
+  letter-spacing: -0.025em;
+  margin: 13px 0 22px;
+}
+
+.hero h1 i {
+  color: #bfa477 !important;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.hero .hero-subtitle {
+  max-width: 590px;
+  color: #827664 !important;
+  font: 400 clamp(19px, 2.1vw, 23px)/1.55 'Cormorant Garamond', serif;
+  letter-spacing: 0.005em;
+  margin: 0 auto 28px;
+}
+
+.hero .text-link {
+  color: #9e8355 !important;
+  border-bottom-color: #bfa477;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.hero .text-link:hover {
+  color: #756044 !important;
+  border-bottom-color: #756044;
+}
+
+@media (max-width: 600px) {
+  .hero .script-line {
+    font-size: 22px;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 10vw, 62px);
+    margin-bottom: 18px;
+  }
+
+  .hero .hero-subtitle {
+    font-size: 19px;
+    max-width: 440px;
+  }
+
+  .hero .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+  }
+}
