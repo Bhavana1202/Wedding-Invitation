@@ -3708,3 +3708,15 @@ select,
     transform: translateY(16px);
   }
 }
+
+
+/* FAMILY DETAILS: remove the artificial blank line around the ampersand.
+   This pulls the second name and address upward while keeping the
+   eyebrow and first name in exactly the same position. */
+@media (max-width: 700px) {
+  .family-card-content .family-names span {
+    display: inline-block !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+}
