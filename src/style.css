@@ -3696,27 +3696,29 @@ select,
 }
 
 
-/* FAMILY FLOWERS: move the complete text group slightly lower
-   so the lower names and addresses use the open space beneath them.
-   Flower shape, size, spacing and all other sections remain unchanged. */
-.family-card-content {
-  transform: translateY(14px);
-}
 
+
+/* FAMILY DETAILS — tighten only the vertical spacing inside each flower.
+   Keep the family heading and first name in place; pull the ampersand,
+   second name and address upward into the unused lower/inner space.
+   No flower dimensions, positions, section spacing or other sections change. */
 @media (max-width: 700px) {
-  .family-card-content {
-    transform: translateY(16px);
+  .family-section .family-card-content {
+    transform: none !important;
   }
-}
 
-
-/* FAMILY DETAILS: remove the artificial blank line around the ampersand.
-   This pulls the second name and address upward while keeping the
-   eyebrow and first name in exactly the same position. */
-@media (max-width: 700px) {
-  .family-card-content .family-names span {
-    display: inline-block !important;
+  .family-section .family-card-content .family-names {
+    line-height: 1.02 !important;
     margin: 0 !important;
+  }
+
+  .family-section .family-card-content .family-names span {
     line-height: 1 !important;
+    margin: 0 !important;
+  }
+
+  .family-section .family-card-content .family-address {
+    margin-top: 2px !important;
+    line-height: 1.2 !important;
   }
 }
