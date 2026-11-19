@@ -2818,3 +2818,24 @@ select,
     gap: 3px;
   }
 }
+
+
+/* Final adjustment: centre the "Scratch to reveal" label inside each flower */
+.flower-cover {
+  position: absolute;
+  inset: 0;
+}
+
+.flower-tap-hint {
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  width: max-content;
+  max-width: 80%;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 4;
+}
+
