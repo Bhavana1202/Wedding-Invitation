@@ -727,9 +727,8 @@ function scratch(node) {
             </svg>
           </span>
           <div class="family-card-content">
-            <p class="eyebrow">Groom's Family</p>
+            <p class="eyebrow">Groom's Parents</p>
             <p class="family-names">Smt. Bharathi P.<br/><span>&</span><br/>Sri Krishna K.</p>
-            <p class="family-address">No. 42, Belaku Nilaya, 4th Cross,<br/>Kalidasa Layout, Sringar,<br/>Bengaluru – 560050</p>
           </div>
         </article>
 
@@ -740,9 +739,8 @@ function scratch(node) {
             </svg>
           </span>
           <div class="family-card-content">
-            <p class="eyebrow">Bride's Family</p>
+            <p class="eyebrow">Bride's Parents</p>
             <p class="family-names">Smt. Mahalakshmi<br/><span>&</span><br/>Sri Melegowda</p>
-            <p class="family-address">No. 19, Sri Lakshmivenkateshwara Nilaya,<br/>2nd Main Road, T. Dasarahalli,<br/>Bengaluru – 560057</p>
           </div>
         </article>
       </div>
