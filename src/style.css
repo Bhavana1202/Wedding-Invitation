@@ -3722,3 +3722,30 @@ select,
     line-height: 1.2 !important;
   }
 }
+
+
+/* FAMILY DETAILS — remove the unused vertical gap between the parent names.
+   Only the spacing within each family text block is tightened; flower artwork,
+   card positions, headings, first-name styling and all other sections stay put. */
+@media (max-width: 700px) {
+  .family-section .family-card-content {
+    justify-content: center !important;
+    gap: 0 !important;
+  }
+
+  .family-section .family-card-content .family-names {
+    line-height: 0.92 !important;
+    margin: 0 !important;
+  }
+
+  .family-section .family-card-content .family-names span {
+    display: block !important;
+    line-height: 0.82 !important;
+    margin: -1px 0 !important;
+  }
+
+  .family-section .family-card-content .family-address {
+    margin-top: 0 !important;
+    line-height: 1.12 !important;
+  }
+}
