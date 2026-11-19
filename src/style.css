@@ -3515,3 +3515,75 @@ select,
   .family-section .family-card-content .family-names { font-size: 11.5px !important; }
   .family-section .family-card-content .family-address { font-size: 6.5px !important; }
 }
+
+
+/* FINAL MOBILE FIX: enlarge both flowers proportionally without distorting
+   the five-petal SVG or letting the two cards touch. */
+@media (max-width: 700px) {
+  .family-section .family-grid {
+    width: calc(100% + 28px) !important;
+    max-width: 588px !important;
+    margin-left: -14px !important;
+    margin-right: -14px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .family-section .family-card {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    overflow: visible !important;
+  }
+
+  .family-section .family-card .family-flower {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+  }
+
+  .family-section .family-card .family-flower svg {
+    width: 100% !important;
+    height: 100% !important;
+    preserveAspectRatio: xMidYMid meet;
+  }
+
+  .family-section .family-card-content {
+    width: 82% !important;
+    padding: 8px 0 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .family-section .family-card-content .eyebrow {
+    font-size: clamp(7px, 1.9vw, 8.5px) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 5px !important;
+  }
+
+  .family-section .family-card-content .family-names {
+    font-size: clamp(11.5px, 3.1vw, 14px) !important;
+    line-height: 1.18 !important;
+  }
+
+  .family-section .family-card-content .family-address {
+    width: 100% !important;
+    font-size: clamp(6.8px, 1.75vw, 7.8px) !important;
+    line-height: 1.24 !important;
+    margin-top: 5px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .family-section .family-grid {
+    width: calc(100% + 18px) !important;
+    margin-left: -9px !important;
+    margin-right: -9px !important;
+    column-gap: 8px !important;
+  }
+  .family-section .family-card-content { width: 80% !important; }
+  .family-section .family-card-content .family-names { font-size: 11px !important; }
+  .family-section .family-card-content .family-address { font-size: 6.5px !important; }
+}
