@@ -3283,3 +3283,27 @@ select,
     gap: 6px;
   }
 }
+
+/* Final adjustment: make the family flowers a little taller without
+   increasing their horizontal width, so the two flowers never touch. */
+@media (max-width: 700px) {
+  .family-section .family-grid {
+    gap: 12px !important;
+    align-items: center;
+  }
+
+  .family-section .family-card {
+    aspect-ratio: 1 / 1.32 !important;
+  }
+
+  .family-section .family-card .family-flower {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .family-section .family-grid { gap: 8px !important; }
+}
