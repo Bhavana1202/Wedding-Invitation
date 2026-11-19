@@ -2737,3 +2737,84 @@ select,
     letter-spacing: 0.12em;
   }
 }
+
+
+
+/* Mobile: keep all three scratch flowers side by side, like desktop.
+   Only the phone layout is changed; desktop sizing remains untouched. */
+@media (max-width: 700px) {
+  .flower-reveal-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .flower-reveal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100%;
+    max-width: 100%;
+    gap: clamp(4px, 1.8vw, 9px);
+    align-items: center;
+  }
+
+  .flower-reveal-card {
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+  }
+
+  .flower-cover,
+  .flower-date {
+    width: 100%;
+    height: 100%;
+  }
+
+  .flower-scratch-layer {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Keep the revealed date typography proportional to the smaller flowers. */
+  .flower-event {
+    font-size: clamp(8px, 2.7vw, 12px);
+    line-height: 1.1;
+    margin-bottom: 3px;
+  }
+
+  .flower-day {
+    font-size: clamp(23px, 7vw, 34px);
+    line-height: .95;
+  }
+
+  .flower-month {
+    font-size: clamp(5px, 1.55vw, 7px);
+    letter-spacing: .08em;
+    margin: 4px 0 2px;
+  }
+
+  .flower-weekday {
+    font-size: clamp(5px, 1.5vw, 7px);
+    line-height: 1.25;
+  }
+
+  .flower-tap-hint {
+    bottom: 13%;
+    font-size: clamp(5px, 1.45vw, 7px);
+    letter-spacing: .08em;
+    white-space: nowrap;
+  }
+}
+
+/* Slightly tighter spacing on very narrow phones. */
+@media (max-width: 360px) {
+  .scratch-section {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .flower-reveal-grid {
+    gap: 3px;
+  }
+}
