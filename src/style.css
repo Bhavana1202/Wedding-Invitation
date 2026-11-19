@@ -3411,3 +3411,107 @@ select,
   .family-section .family-card-content .family-names { font-size: 11.5px !important; }
   .family-section .family-card-content .family-address { font-size: 6.5px !important; }
 }
+
+/* RESTORE THE ORIGINAL FIVE-PETAL SILHOUETTE ON PHONES.
+   Keep the SVG square and proportional; do not stretch or crop its side petals. */
+@media (max-width: 700px) {
+  .family-section {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    overflow: visible !important;
+  }
+
+  .family-section .family-grid {
+    width: 100% !important;
+    max-width: 560px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 10px !important;
+    row-gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .family-section .family-card {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    display: grid !important;
+    place-items: center !important;
+    isolation: isolate;
+  }
+
+  .family-section .family-card .family-flower {
+    position: absolute !important;
+    z-index: 0 !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    transform: none !important;
+    animation: none !important;
+    overflow: visible !important;
+  }
+
+  .family-section .family-card .family-flower svg {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    preserveAspectRatio: xMidYMid meet;
+    overflow: visible !important;
+  }
+
+  .family-section .family-card-content {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 78% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 8px 0 !important;
+    text-align: center !important;
+  }
+
+  .family-section .family-card-content .eyebrow {
+    margin: 0 0 5px !important;
+    font-size: clamp(7px, 1.9vw, 8.5px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: .06em !important;
+  }
+
+  .family-section .family-card-content .family-names {
+    margin: 0 !important;
+    font-size: clamp(12px, 3.25vw, 15px) !important;
+    line-height: 1.16 !important;
+  }
+
+  .family-section .family-card-content .family-names span {
+    display: block !important;
+    margin: 2px 0 !important;
+  }
+
+  .family-section .family-card-content .family-address {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 6px auto 0 !important;
+    font-size: clamp(6.8px, 1.8vw, 8px) !important;
+    line-height: 1.25 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .family-section .family-note {
+    max-width: 94% !important;
+    margin: 28px auto 0 !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .family-section .family-grid { column-gap: 6px !important; }
+  .family-section .family-card-content { width: 76% !important; }
+  .family-section .family-card-content .family-names { font-size: 11.5px !important; }
+  .family-section .family-card-content .family-address { font-size: 6.5px !important; }
+}
