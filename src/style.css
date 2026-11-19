@@ -3749,3 +3749,69 @@ select,
     line-height: 1.12 !important;
   }
 }
+
+/* FINAL FAMILY FLOWER ALIGNMENT — identical text layout in both flowers.
+   This overrides the earlier mobile spacing experiments without changing
+   the flower artwork, dimensions, positions, or any other section. */
+@media (max-width: 700px) {
+  .family-section .family-card-content {
+    width: 82% !important;
+    max-width: 250px !important;
+    min-height: 0 !important;
+    padding: 0 6px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  .family-section .family-card-content > .eyebrow {
+    width: 100% !important;
+    margin: 0 0 8px !important;
+    font-size: 8px !important;
+    line-height: 1.25 !important;
+    letter-spacing: .11em !important;
+    text-align: center !important;
+  }
+
+  .family-section .family-card-content .family-names {
+    width: 100% !important;
+    margin: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.18 !important;
+    text-align: center !important;
+  }
+
+  .family-section .family-card-content .family-names span {
+    display: block !important;
+    margin: 4px 0 !important;
+    line-height: 1.05 !important;
+  }
+
+  .family-section .family-card-content .family-address {
+    width: 100% !important;
+    margin: 8px 0 0 !important;
+    font-size: 8px !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .family-section .family-card-content {
+    width: 80% !important;
+  }
+
+  .family-section .family-card-content .family-names {
+    font-size: 11.5px !important;
+  }
+
+  .family-section .family-card-content .family-address {
+    font-size: 6.8px !important;
+  }
+}
