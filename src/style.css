@@ -3952,3 +3952,31 @@ select,
     opacity: 1;
   }
 }
+
+
+/* Scratch instruction belongs to the gold flower coating and fades away
+   together with it once enough of the flower has been scratched. */
+.flower-cover {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 420ms ease, visibility 0s linear 0s;
+}
+
+.flower-cover.is-revealed {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 420ms ease, visibility 0s linear 420ms;
+}
+
+.flower-cover .flower-tap-hint {
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flower-cover,
+  .flower-cover.is-revealed {
+    transition: none;
+  }
+}

@@ -526,6 +526,37 @@ function scratch(node) {
     const rect = node.getBoundingClientRect();
     return { x: event.clientX - rect.left, y: event.clientY - rect.top };
   }
+  let progressCheckCounter = 0;
+  const cover = node.closest('.flower-cover');
+
+  function checkRevealProgress() {
+    // Sample only points inside the flower, so transparent canvas corners
+    // are not counted as scratched-away coating.
+    const flower = flowerPath();
+    const pixels = ctx.getImageData(0, 0, node.width, node.height).data;
+    const step = 8;
+    let inside = 0;
+    let erased = 0;
+
+    for (let y = step / 2; y < height; y += step) {
+      for (let x = step / 2; x < width; x += step) {
+        if (!ctx.isPointInPath(flower, x, y)) continue;
+        inside += 1;
+        const px = Math.min(node.width - 1, Math.floor(x * dpr));
+        const py = Math.min(node.height - 1, Math.floor(y * dpr));
+        const alpha = pixels[(py * node.width + px) * 4 + 3];
+        if (alpha < 32) erased += 1;
+      }
+    }
+
+    // Once roughly one-third of the flower is scratched, reveal the full date.
+    if (inside > 0 && erased / inside >= 0.34) {
+      revealed = true;
+      drawing = false;
+      cover?.classList.add('is-revealed');
+    }
+  }
+
   function erase(event) {
     if (!drawing || revealed) return;
     const point = getPoint(event);
@@ -536,6 +567,10 @@ function scratch(node) {
     ctx.arc(point.x, point.y, 19, 0, Math.PI * 2);
     ctx.fill();
     ctx.restore();
+
+    // Avoid reading the canvas pixels on every single pointer event.
+    progressCheckCounter += 1;
+    if (progressCheckCounter % 8 === 0) checkRevealProgress();
   }
 
   function start(event) {
@@ -546,7 +581,10 @@ function scratch(node) {
     node.setPointerCapture?.(event.pointerId);
     erase(event);
   }
-  function stop() { drawing = false; }
+  function stop() {
+    if (drawing && !revealed) checkRevealProgress();
+    drawing = false;
+  }
 
   paintCover();
   node.addEventListener('pointerdown', start);
