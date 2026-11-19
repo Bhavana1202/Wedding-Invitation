@@ -3714,7 +3714,7 @@ select,
 
   .family-section .family-card-content .family-names span {
     line-height: 1 !important;
-    margin: 0 !important;
+    margin: 5px 0 0 !important;
   }
 
   .family-section .family-card-content .family-address {
