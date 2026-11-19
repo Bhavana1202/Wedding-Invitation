@@ -3266,44 +3266,148 @@ select,
 .family-section { position: relative; z-index: 1; }
 .family-section .family-card-content { position: relative; z-index: 2; }
 
-/* Slightly enlarge the family flowers on phones while keeping a clear gap. */
+
+/* Slightly larger family flowers on phones, while keeping the two cards side by side.
+   The grid gap and card widths are controlled together to prevent the flowers touching. */
 @media (max-width: 700px) {
-  .family-section .family-grid {
-    max-width: 580px;
-    gap: 10px;
-  }
-
-  .family-section .family-card {
-    aspect-ratio: 1 / 1.22;
-  }
-}
-
-@media (max-width: 360px) {
-  .family-section .family-grid {
-    gap: 6px;
-  }
-}
-
-/* Final adjustment: make the family flowers a little taller without
-   increasing their horizontal width, so the two flowers never touch. */
-@media (max-width: 700px) {
-  .family-section .family-grid {
-    gap: 12px !important;
+  .family-grid {
+    width: calc(100% - 18px);
+    max-width: 420px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 8px;
+    row-gap: 10px;
     align-items: center;
   }
 
+  .family-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 372px;
+    height: 372px;
+    overflow: visible;
+  }
+
+  .family-card .family-flower {
+    width: 100%;
+    max-width: 196px;
+    height: 372px;
+    max-height: none;
+    inset: 0;
+  }
+
+  .family-card-content {
+    width: 82%;
+    max-width: none;
+    padding: 12px 2px;
+  }
+
+  .family-card-content .eyebrow {
+    font-size: 8.5px;
+    letter-spacing: .11em;
+  }
+
+  .family-card-content .family-names {
+    font-size: clamp(15px, 4.1vw, 17px);
+    line-height: 1.2;
+  }
+
+  .family-card-content .family-address {
+    margin-top: 9px !important;
+    font-size: clamp(8px, 2.25vw, 9px) !important;
+    line-height: 1.4;
+  }
+}
+
+/* FINAL PHONE TUNING — slightly fuller flowers with a protected text area.
+   The flower grows inside its own card; text stays above it and never touches
+   the neighbouring flower. Desktop styling is unchanged. */
+@media (max-width: 700px) {
+  .family-section .family-grid {
+    width: 100% !important;
+    max-width: 560px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 10px !important;
+    row-gap: 12px !important;
+    align-items: center !important;
+  }
+
   .family-section .family-card {
-    aspect-ratio: 1 / 1.32 !important;
+    position: relative !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: clamp(205px, 57vw, 238px) !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    display: grid !important;
+    place-items: center !important;
   }
 
   .family-section .family-card .family-flower {
+    position: absolute !important;
+    z-index: 0 !important;
+    width: 112% !important;
+    height: 112% !important;
+    max-width: none !important;
+    max-height: none !important;
+    left: -6% !important;
+    top: -6% !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .family-section .family-card .family-flower svg {
+    display: block !important;
     width: 100% !important;
     height: 100% !important;
+  }
+
+  .family-section .family-card-content {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 76% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 8px 0 !important;
+    text-align: center !important;
+  }
+
+  .family-section .family-card-content .eyebrow {
+    margin: 0 0 5px !important;
+    font-size: clamp(7px, 1.85vw, 8.5px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: .07em !important;
+  }
+
+  .family-section .family-card-content .family-names {
+    margin: 0 !important;
+    font-size: clamp(12px, 3.25vw, 15px) !important;
+    line-height: 1.16 !important;
+  }
+
+  .family-section .family-card-content .family-names span {
+    display: block !important;
+    margin: 2px 0 !important;
+  }
+
+  .family-section .family-card-content .family-address {
+    width: 100% !important;
     max-width: 100% !important;
-    max-height: 100% !important;
+    margin: 6px auto 0 !important;
+    font-size: clamp(6.8px, 1.8vw, 8px) !important;
+    line-height: 1.25 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
   }
 }
 
 @media (max-width: 360px) {
-  .family-section .family-grid { gap: 8px !important; }
+  .family-section .family-grid { column-gap: 5px !important; }
+  .family-section .family-card { height: 202px !important; }
+  .family-section .family-card-content { width: 74% !important; }
+  .family-section .family-card-content .family-names { font-size: 11.5px !important; }
+  .family-section .family-card-content .family-address { font-size: 6.5px !important; }
 }
