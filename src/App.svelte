@@ -244,6 +244,73 @@ function createSparkle(event) {
     });
   }
 
+  // On phones/tablets, create a small sparkle burst when the user touches
+  // the page, then leave a light trail while their finger moves.
+  let lastTouchSparkleTime = 0;
+
+  function appendTouchSparkle(x, y) {
+    const sparkle = document.createElement('span');
+    sparkle.className = 'cursor-sparkle touch-sparkle';
+    sparkle.textContent = Math.random() > 0.35 ? '✦' : '✧';
+    sparkle.style.left = `${x}px`;
+    sparkle.style.top = `${y}px`;
+    sparkle.style.setProperty(
+      '--sparkle-size',
+      `${12 + Math.random() * 10}px`
+    );
+    sparkleLayer.appendChild(sparkle);
+
+    sparkle.addEventListener('animationend', () => sparkle.remove(), {
+      once: true
+    });
+  }
+
+  function createTouchSparkleBurst(event) {
+    if (
+      event.pointerType !== 'touch' ||
+      prefersReducedMotion
+    ) return;
+
+    // Four small sparkles appear around each tap, including the envelope tap.
+    for (let i = 0; i < 4; i += 1) {
+      const angle = (Math.PI * 2 * i) / 4 + Math.random() * 0.35;
+      const distance = 9 + Math.random() * 13;
+      appendTouchSparkle(
+        event.clientX + Math.cos(angle) * distance,
+        event.clientY + Math.sin(angle) * distance
+      );
+    }
+  }
+
+  function createTouchSparkleTrail(event) {
+    if (
+      event.pointerType !== 'touch' ||
+      !opened ||
+      prefersReducedMotion
+    ) return;
+
+    // Limit the number of particles during a finger swipe.
+    const now = performance.now();
+    if (now - lastTouchSparkleTime < 65) return;
+    lastTouchSparkleTime = now;
+    appendTouchSparkle(
+      event.clientX + (Math.random() - 0.5) * 10,
+      event.clientY + (Math.random() - 0.5) * 10
+    );
+  }
+
+  const touchPointerQuery = window.matchMedia(
+    '(hover: none), (pointer: coarse)'
+  );
+  if (touchPointerQuery.matches) {
+    window.addEventListener('pointerdown', createTouchSparkleBurst, {
+      passive: true
+    });
+    window.addEventListener('pointermove', createTouchSparkleTrail, {
+      passive: true
+    });
+  }
+
   // Soft petals drift down at slightly different speeds.
   const petalCharacters = ['❀', '✿', '❁', '❋'];
   
@@ -326,6 +393,8 @@ function createPetal() {
     clearInterval(timer);
     clearInterval(petalTimer);
     window.removeEventListener('pointermove', createSparkle);
+    window.removeEventListener('pointerdown', createTouchSparkleBurst);
+    window.removeEventListener('pointermove', createTouchSparkleTrail);
     petalLayer.remove();
     sparkleLayer.remove();
   };

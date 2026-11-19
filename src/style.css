@@ -3928,3 +3928,27 @@ select,
     line-height: 1.25 !important;
   }
 }
+
+
+/* TOUCH SPARKLES — visible finger-tap burst and trail on mobile devices.
+   The custom mouse cursor stays hidden on touch screens; only the animated
+   gold sparkle particles are shown. */
+.touch-sparkle {
+  color: #bfa477 !important;
+  text-shadow:
+    0 0 7px rgba(216, 196, 158, .95),
+    0 0 15px rgba(255, 244, 216, .95),
+    0 0 22px rgba(170, 149, 103, .45) !important;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .sparkle-layer {
+    z-index: 100000 !important;
+    pointer-events: none !important;
+  }
+
+  .sparkle-layer .touch-sparkle {
+    display: block !important;
+    opacity: 1;
+  }
+}
