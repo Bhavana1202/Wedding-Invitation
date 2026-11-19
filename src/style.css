@@ -3694,3 +3694,17 @@ select,
     overflow-wrap: break-word;
   }
 }
+
+
+/* FAMILY FLOWERS: move the complete text group slightly lower
+   so the lower names and addresses use the open space beneath them.
+   Flower shape, size, spacing and all other sections remain unchanged. */
+.family-card-content {
+  transform: translateY(14px);
+}
+
+@media (max-width: 700px) {
+  .family-card-content {
+    transform: translateY(16px);
+  }
+}
