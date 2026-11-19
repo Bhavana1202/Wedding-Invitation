@@ -3265,3 +3265,21 @@ select,
 .petal-layer { z-index: 0; }
 .family-section { position: relative; z-index: 1; }
 .family-section .family-card-content { position: relative; z-index: 2; }
+
+/* Slightly enlarge the family flowers on phones while keeping a clear gap. */
+@media (max-width: 700px) {
+  .family-section .family-grid {
+    max-width: 580px;
+    gap: 10px;
+  }
+
+  .family-section .family-card {
+    aspect-ratio: 1 / 1.22;
+  }
+}
+
+@media (max-width: 360px) {
+  .family-section .family-grid {
+    gap: 6px;
+  }
+}
